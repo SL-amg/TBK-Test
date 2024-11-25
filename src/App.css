@@ -1,3 +1,103 @@
+/* NavBar css with Logo */
+.navBar{
+  justify-content: space-between;
+  display: flex;
+  background-color: #7a7a7a;
+  align-items: center;
+}
+
+.bank-logo {
+  height: 150px;
+  pointer-events: none;
+}
+
+.bankName{
+  display: flex;
+  flex-direction: row;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.button {
+  --color: #6b00f8;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+ }
+ 
+ .button::before, .button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ .button::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .button:hover::before, .button:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .button:hover {
+  color: rgb(10, 25, 30);
+ }
+ 
+ .button:active {
+  filter: brightness(.8);
+ }
+ 
+/* ---- The End of NavBar Component CSS ---- */
+
+/* Register css */
+
+.registerMain {
+  background-color: #a8a8a8;
+  flex-direction: row;
+  display: flex;
+  justify-content: Center;
+  color: rgb(0, 0, 0);
+}
+
+
+/* ---- The End of Register Component CSS ---- */
+
+/* Home css */
+
+.homeImage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* ---- The End of Home Component CSS ---- */
 
 .App {
   text-align: center;
