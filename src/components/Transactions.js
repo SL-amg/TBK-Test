@@ -7,7 +7,8 @@ import { useState } from "react";
 const Transactions = () => {
   const queryClient = useQueryClient();
   const [type, setType] = useState("");
-  const [query, setQuery]= useState ("");
+  const [query, setQuery] = useState("");
+  const [query2, setQuery2] = useState("");
 
   const { data } = useQuery({
     queryKey: ["transactions"],
@@ -15,35 +16,46 @@ const Transactions = () => {
   });
   console.log(data)
 
-  const transactionList = data?.filter((transaction)=>JSON.stringify(transaction.amount).includes(query))
-  .filter((transaction) => transaction.type.includes(type))
+  const transactionList = data?.filter((transaction) => JSON.stringify(transaction.createdAt).includes(query2))
+    .filter((transaction) => JSON.stringify(transaction.amount).includes(query))
+    .filter((transaction) => transaction.type.includes(type))
     .map((transaction) =>
       <TransactionCard transaction={transaction} key={transaction?.id} amount={transaction?.amount} time={transaction?.createdAt} type={transaction?.type} />)
 
   return (
     <div>
       <div>
-      <input
-                  type="search"
-                  className="form-control rounded"
-                  placeholder="Search"
-                  aria-label="Search"
-                  aria-describedby="search-addon"
-                  onChange={(event)=> setQuery(event.target.value)} // created an onChange with input event that calles setQuery and gives it event.tagrt.value
-                />
+        <input
+          type="Search"
+          className="form-control rounded"
+          placeholder="Search By Date"
+          aria-label="Search"
+          aria-describedby="search-addon"
+          onChange={(event) => setQuery2(event.target.value)} // created an onChange with input event that calles setQuery and gives it event.tagrt.value
+        />
+      </div>
+      <div>
+        <input
+          type="Search"
+          className="form-control rounded"
+          placeholder="Search By Amount"
+          aria-label="Search"
+          aria-describedby="search-addon"
+          onChange={(event) => setQuery(event.target.value)} // created an onChange with input event that calles setQuery and gives it event.tagrt.value
+        />
       </div>
 
       <div>
-      Type:
-      <select className="form-select" onChange={(event) => setType(event.target.value)}> {/* to add a filter by type */}
-        <option value="" selected>
-          All
-        </option>
-        <option value="deposit">Deposit</option>
-        <option value="withdraw">Withdraw</option>
-      </select>
+        Type:
+        <select className="form-select" onChange={(event) => setType(event.target.value)}> {/* to add a filter by type */}
+          <option value="" selected>
+            All
+          </option>
+          <option value="deposit">Deposit</option>
+          <option value="withdraw">Withdraw</option>
+        </select>
       </div>
-      
+
       {transactionList}
     </div>
 
