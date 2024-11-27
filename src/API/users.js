@@ -2,20 +2,14 @@ import instance from "./index";
 import axios from "axios";
 
 const register = async (userInfo) => {
-  const response = await instance.post(
-    "/mini-project/api/auth/register",
-    userInfo
-  );
+  const response = await instance.post("/mini-project/api/auth/register", userInfo);
   localStorage.setItem("token", response.token);
   console.log("login data", response);
   return response;
 };
 
 async function Login(userInfo) {
-  const response = await instance.post(
-    "/mini-project/api/auth/login",
-    userInfo
-  );
+  const response = await instance.post("/mini-project/api/auth/login", userInfo);
   localStorage.setItem("token", response.token);
   console.log("login data", response);
   return response;
@@ -32,9 +26,14 @@ async function getTransaction() {
 }
 
 async function getAllUsers() {
-  const response = await instance.get("/mini-project/api/auth/users");
-  return response;
+  const { data } = await instance.get("/mini-project/api/auth/users");
+  return data;
 }
+//
+// async function getAllUsers() {
+//   const response = await instance.get("/mini-project/api/auth/users");
+//   return response;
+
 async function updateProfile() {
   const response = await instance.put("/mini-project/api/auth/profile");
   return response;
@@ -42,15 +41,13 @@ async function updateProfile() {
 
 async function putDeposit(formData) {
   console.log("putDeposit", formData);
-  const response = await instance.put(
-    "/mini-project/api/transactions/deposit",
-    formData
-  );
+  const response = await instance.put("/mini-project/api/transactions/deposit", formData);
   return response;
 }
 
 async function putWithdraw(amount) {
-  const response = await instance.put("/mini-project/api/auth/withdraw");
+  console.log("putWithdraw", amount);
+  const response = await instance.put("/mini-project/api/auth/withdraw", {amount});
   return response;
 }
 
