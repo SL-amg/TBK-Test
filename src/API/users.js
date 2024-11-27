@@ -21,12 +21,13 @@ async function getProfile() {
 }
 
 async function getTransaction() {
-  const response = await instance.get("/mini-project/api/auth/my");
+  const response = await instance.get("/mini-project/api/transactions/my");
   return response;
 }
 
 async function getAllUsers() {
-  const { data } = await instance.get("/mini-project/api/auth/users");
+  const data = await instance.get("/mini-project/api/auth/users");
+  console.log(data,"users")
   return data;
 }
 //
@@ -45,9 +46,9 @@ async function putDeposit(formData) {
   return response;
 }
 
-async function putWithdraw(amount) {
-  console.log("putWithdraw", amount);
-  const response = await instance.put("/mini-project/api/auth/withdraw", {amount});
+async function putWithdraw(formData) {
+  console.log("putWithdraw", formData);
+  const response = await instance.put("/mini-project/api/transactions/withdraw", formData);
   return response;
 }
 

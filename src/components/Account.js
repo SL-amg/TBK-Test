@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { getProfile, putDeposit, putWithdraw } from "../API/users";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import {  useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Formik, Field, Form } from "formik";
 
 const Account = () => {
+const queryClient = useQueryClient();
+
   const { data } = useQuery({
     queryKey: ["profiles"],
     queryFn: getProfile,
@@ -12,6 +14,10 @@ const Account = () => {
   const mutation = useMutation({
     mutationKey: ["money"],
     mutationFn: putDeposit,
+    onSuccess:()=>{
+      console.log("object")
+   queryClient.invalidateQueries({queryKey:["profiles"]})
+    }
   });
   function submit(values) {
     mutation.mutate(values);
@@ -21,6 +27,9 @@ const Account = () => {
   const withdrawMutation = useMutation({
     mutationKey: ["withdraw"],
     mutationFn: putWithdraw,
+    onSuccess:()=>{
+   queryClient.invalidateQueries({queryKey:["profiles"]})
+    }
   });
   function withdraw(values) {
     withdrawMutation.mutate(values);
