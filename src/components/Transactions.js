@@ -1,6 +1,7 @@
 import React from "react";
 import { getTransaction } from "../API/users";
 import {  useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import TransactionCard from "./TransactionCard";
 
 
 const Transactions = () => {
@@ -12,35 +13,12 @@ const Transactions = () => {
   });
 console.log (data)
 
+const transactionList = data?.map((transaction)=>
+<TransactionCard transaction={transaction} key={transaction?.id} amount={transaction?.amount} time={transaction?.createdAt} type={transaction?.type} />)
 
   return (
   <div>
-       {data?.map((user) => (
-        <div
-          key={user?.id}
-        >
-          <div >
-            <h3 >
-              {user?.amount}
-            </h3>
-            <h3 >
-              {user?.createdAt}
-            </h3>
-            {/* <h3 >
-              {user?.from}
-            </h3>
-            <h3 >
-              {user?.to}
-            </h3> */}
-            <h3 >
-              {user?.type}
-            </h3>
-            {/* <h3 >
-              {user?.updatedAt}
-            </h3> */}
-          </div>
-        </div>
-      ))}
+{transactionList}
   </div>
   
   );
