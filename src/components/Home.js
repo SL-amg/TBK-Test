@@ -1,13 +1,14 @@
 import React from "react";
-import kuwaitimage from '../images/aliyonis.jpg';
+import { Navigate } from "react-router-dom";
+import Account from "./Account";
+import { checkToken } from "../API/storage";
 
 const Home = () => {
-  return (
-    <div>
-      <img className='homeImage' src={kuwaitimage} />
-      <div>Welcome to TBK! thsis is the home page</div>
-    </div>
-      );
+  if (!checkToken()) {
+    return <Navigate to="/login" />;
+  }
+
+  return <Navigate to="/account" />;
 };
 
-      export default Home;
+export default Home;

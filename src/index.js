@@ -9,6 +9,11 @@ import Home from "./components/Home";
 import RegisterUser from "./components/RegisterUser";
 import LoginUser from "./components/LoginUser";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import ProfileNavBar from "./components/ProfileNavBar";
+import Profile from "./components/Profile";
+import Transactions from "./components/Transactions";
+import UsersList from "./components/UsersList";
+import Account from "./components/Account";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +42,43 @@ const router = createBrowserRouter([
       <>
         <NavBar />
         <LoginUser />
+      </>
+    ),
+  },
+
+  {
+    path: "/account",
+    element: (
+      <>
+        <ProfileNavBar />
+        <Account />
+      </>
+    ),
+  },
+  {
+    path: "/profile",
+    element: (
+      <>
+        <ProfileNavBar />
+        <Profile />
+      </>
+    ),
+  },
+  {
+    path: "/transactions",
+    element: (
+      <>
+        <ProfileNavBar />
+        <Transactions />
+      </>
+    ),
+  },
+  {
+    path: "/userslist",
+    element: (
+      <>
+        <ProfileNavBar />
+        <UsersList />
       </>
     ),
   },
