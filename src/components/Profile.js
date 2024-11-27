@@ -10,21 +10,30 @@ const Profile = () => {
   console.log(data);
 
   return (
-    <div>
+    <div className="profileBackground">
+      <div className="centerProfile">
+<div className="profileAction" >
       <div>
-        username:
+        <h1>Welcome</h1>
         <h2>{data?.username}</h2>
       </div>
 
       <div>
-        image:
+        <h2>Profile image:</h2>
         <h2>{data?.image}</h2>
       </div>
-      <div>
-        Balance:
+      <div >
+        <h2>Your Balance Is:</h2>
+        <div className="balanceDiv">
         <h2>{data?.balance}</h2>
+        <h3>KWD</h3>
+        </div>
       </div>
     </div>
+    </div>
+    </div>
+    
+    
   );
 };
 
