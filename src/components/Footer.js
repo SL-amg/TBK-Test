@@ -1,9 +1,11 @@
 import React from 'react'
 
+
 const Footer = () => {
   return (
-    <div>
-      
+    <div className='footerMain'>
+      hello
+      hellohello
     </div>
   )
 }

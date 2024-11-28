@@ -14,19 +14,19 @@ const Profile = () => {
       <div className="centerProfile">
 <div className="profileAction" >
       <div>
-        <h1>Welcome</h1>
-        <h2>{data?.username}</h2>
+        <h1 className="profileWelcome">Welcome</h1>
+        <h2 className="welcomeName">{data?.username}</h2>
       </div>
 
       <div>
         <h2>Profile image:</h2>
         <h2>{data?.image}</h2>
       </div>
-      <div >
+      <div className="balanceMainDiv">
         <h2>Your Balance Is:</h2>
         <div className="balanceDiv">
-        <h2>{data?.balance}</h2>
-        <h3>KWD</h3>
+        <h2 className="welcomeBalance">{data?.balance} </h2>
+        <h3>  KWD</h3>
         </div>
       </div>
     </div>

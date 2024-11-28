@@ -4,6 +4,7 @@ import { Formik, Form, Field } from "formik";
 import { register } from "../API/users";
 import "../App.css";
 import { NavLink, useNavigate } from "react-router-dom";
+import imagemain from '../images/aliyonis.jpg'
 
 const RegisterUser = () => {
   const navigate = useNavigate();
@@ -22,26 +23,26 @@ const RegisterUser = () => {
 
   return (
     <div className="registerMain">
-      {" "}
+
       {/* Main Rigister page div*/}
-      <div>
-        {" "}
+      <div className="registerImageDiv " >
+
         {/* Picture div*/}
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1-d45bTo0TcWGLAOTK2jIBu8u-DHjzwy1EjE7M-xeGLdZj9ug5uePlwsesspxMQatLGo&usqp=CAU"
-          className="bank-logo"
+          src={imagemain}
+          className="registerImage"
           alt="rigister Logo"
         />
       </div>
-      <div>
-        {/* Register div*/}
+
+     {/* Register div*/}
+      <div className="registerInputDiv">
         <h1>Register Your Account</h1>
         <div>
           if you have an account, Login
           <NavLink to="/login">here</NavLink>
         </div>
         <div>
-          {" "}
           {/* Formik and rigister div*/}
           <Formik
             initialValues={{ username: "", image: "", password: "" }}

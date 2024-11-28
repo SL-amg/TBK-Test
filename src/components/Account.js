@@ -40,15 +40,15 @@ const queryClient = useQueryClient();
 
       <div className="centerBalance">
         <div className="welcomeDiv">
-        <h1>Welcome Mr: </h1> 
-        <h2>{data?.username}</h2>
+        <h1>Welcome</h1> 
+        <h2 className="welcomeName">{data?.username}</h2>
         </div>
       </div>
 
       <div className="centerBalance">
         <div className="balanceAccount">
           <h2>Your Balance is:</h2>
-          <h3>{data?.balance}</h3>
+          <h3 className="welcomeBalance">{data?.balance}</h3>
         </div>
       </div>
 

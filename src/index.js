@@ -14,6 +14,7 @@ import Profile from "./components/Profile";
 import Transactions from "./components/Transactions";
 import UsersList from "./components/UsersList";
 import Account from "./components/Account";
+import Footer from "./components/Footer";
 
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
       <>
         <NavBar />
         <RegisterUser />
+        <Footer />
       </>
     ),
   },
@@ -43,6 +45,7 @@ const router = createBrowserRouter([
       <>
         <NavBar />
         <LoginUser />
+        <Footer />
       </>
     ),
   },
@@ -53,6 +56,7 @@ const router = createBrowserRouter([
       <>
         <ProfileNavBar />
         <Account />
+        <Footer />
       </>
     ),
   },
@@ -62,6 +66,7 @@ const router = createBrowserRouter([
       <>
         <ProfileNavBar />
         <Profile />
+        <Footer />
       </>
     ),
   },
@@ -71,6 +76,7 @@ const router = createBrowserRouter([
       <>
         <ProfileNavBar />
         <Transactions />
+        <Footer />
       </>
     ),
   },
@@ -80,6 +86,7 @@ const router = createBrowserRouter([
       <>
         <ProfileNavBar />
         <UsersList />
+        <Footer />
       </>
     ),
   },

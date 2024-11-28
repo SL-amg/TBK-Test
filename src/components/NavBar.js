@@ -4,17 +4,18 @@ import RegisterUser from "./RegisterUser";
 import LoginUser from "./LoginUser";
 import { NavLink } from "react-router-dom";
 import "../App.css";
+import image from '../images/tbkbank.png'
 
 const NavBar = () => {
   return (
     <div className="navBar">
       <div className="bankName">
         <img
-          src="https://media1.giphy.com/avatars/Ozow/FusZsQuJoSz7.gif"
+          src={image}
           className="bank-logo"
           alt="bank Logo"
         />
-        <h1>TBK Total Bank of Kuwait</h1>
+        <h1>Total Bank of Kuwait</h1>
       </div>
       <nav>
         <NavLink to="/">

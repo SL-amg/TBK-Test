@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "../App.css";
 import { deleteToken } from "../API/storage";
-
+import image from '../images/tbkbank.png'
 
 const ProfileNavBar = () => {
 
@@ -16,12 +16,12 @@ const ProfileNavBar = () => {
   return (
     <div className="navBar">
       <div className="bankName">
-        <img
-          src="https://media1.giphy.com/avatars/Ozow/FusZsQuJoSz7.gif"
+      <img
+          src={image}
           className="bank-logo"
           alt="bank Logo"
         />
-        <h1>TBK Total Bank of Kuwait</h1>
+        <h1>Total Bank of Kuwait</h1>
       </div>
       <nav>
         <NavLink to="/account">

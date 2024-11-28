@@ -23,40 +23,46 @@ const Transactions = () => {
       <TransactionCard transaction={transaction} key={transaction?.id} amount={transaction?.amount} time={transaction?.createdAt} type={transaction?.type} />)
 
   return (
-    <div>
+    <div className="transactionBackground">
       <div>
-        <input
-          type="Search"
-          className="form-control rounded"
-          placeholder="Search By Date"
-          aria-label="Search"
-          aria-describedby="search-addon"
-          onChange={(event) => setQuery2(event.target.value)} // created an onChange with input event that calles setQuery and gives it event.tagrt.value
-        />
-      </div>
-      <div>
-        <input
-          type="Search"
-          className="form-control rounded"
-          placeholder="Search By Amount"
-          aria-label="Search"
-          aria-describedby="search-addon"
-          onChange={(event) => setQuery(event.target.value)} // created an onChange with input event that calles setQuery and gives it event.tagrt.value
-        />
+        <div className="serachDiv">
+          <input
+            type="Search"
+            className="line"
+            placeholder="Search By Date"
+            aria-label="Search"
+            aria-describedby="search-addon"
+            onChange={(event) => setQuery2(event.target.value)} // created an onChange with input event that calles setQuery and gives it event.tagrt.value
+          />
+        </div>
+        <div className="serachDiv">
+          <input
+            type="Search"
+            className="line"
+            placeholder="Search By Amount"
+            aria-label="Search"
+            aria-describedby="search-addon"
+            onChange={(event) => setQuery(event.target.value)} // created an onChange with input event that calles setQuery and gives it event.tagrt.value
+          />
+        </div>
+        <div className="serachDiv">
+          <div className="selectBox">
+          Type:
+          <select className="selectBox" onChange={(event) => setType(event.target.value)}> {/* to add a filter by type */}
+            <option value="" selected>
+              All
+            </option>
+            <option value="deposit">Deposit</option>
+            <option value="withdraw">Withdraw</option>
+          </select>
+          </div>
+        </div>
       </div>
 
-      <div>
-        Type:
-        <select className="form-select" onChange={(event) => setType(event.target.value)}> {/* to add a filter by type */}
-          <option value="" selected>
-            All
-          </option>
-          <option value="deposit">Deposit</option>
-          <option value="withdraw">Withdraw</option>
-        </select>
-      </div>
+<div className="resultView">
+{transactionList}
+</div>
 
-      {transactionList}
     </div>
 
   );

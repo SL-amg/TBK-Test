@@ -16,9 +16,9 @@ const User = () => {
     // from axio task to check why not working
 
     return (
-    <>
+    <div className="transactionBackground">
        {userCardView}
-    </>
+    </div>
   )
 };
 
