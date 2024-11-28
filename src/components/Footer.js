@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className='footerMain'>
       <h3 className='footerMain'>
-      This was suppose to be a Footer 
+      © Copyright 1987 TBK
       </h3>
     </div>
   )
