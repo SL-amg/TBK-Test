@@ -16,7 +16,7 @@ const ProfileNavBar = () => {
   return (
     <div className="navBar">
       <div className="bankName">
-      <img
+        <img
           src={image}
           className="bank-logo"
           alt="bank Logo"

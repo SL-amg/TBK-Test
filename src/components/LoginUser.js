@@ -35,39 +35,39 @@ const LoginUser = () => {
         />
       </div>
 
-<div className="loginMain">
-      <div className="loginInputDiv">
-      <h1>Login Your Account</h1>
-      <div>
-        if you don't have an account, Register
-        <NavLink to="/register">here</NavLink>
-      </div>
-      <Formik initialValues={{ username: "", password: "" }} onSubmit={submit}>
-        <Form>
-        <h4>Username</h4>
-          <Field
-            as="input"
-            name="username"
-            type="text"
-            placeholder="Username"
-             className="barStyle"
-          />
-          <h4>Password</h4>
-          <Field
-            as="input"
-            name="password"
-            type="password"
-            placeholder="Password"
-             className="barStyle"
-          />
-          <button className="button" type="submit">Login</button>
-        </Form>
-      </Formik>
-      </div>
+      <div className="loginMain">
+        <div className="loginInputDiv">
+          <h1>Login Your Account</h1>
+          <div>
+            if you don't have an account, Register
+            <NavLink className="textRegister" to="/register"> here</NavLink>
+          </div>
+          <Formik initialValues={{ username: "", password: "" }} onSubmit={submit}>
+            <Form>
+              <h4>Username</h4>
+              <Field
+                as="input"
+                name="username"
+                type="text"
+                placeholder="Username"
+                className="barStyle"
+              />
+              <h4>Password</h4>
+              <Field
+                as="input"
+                name="password"
+                type="password"
+                placeholder="Password"
+                className="barStyle"
+              />
+              <button className="button" type="submit">Login</button>
+            </Form>
+          </Formik>
+        </div>
 
+      </div>
     </div>
-    </div>
-    
+
   );
 };
 

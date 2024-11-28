@@ -27,7 +27,7 @@ async function getTransaction() {
 
 async function getAllUsers() {
   const data = await instance.get("/mini-project/api/auth/users");
-  console.log(data,"users")
+  console.log(data, "users")
   return data;
 }
 //

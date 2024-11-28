@@ -23,7 +23,7 @@ const Transactions = () => {
       <TransactionCard transaction={transaction} key={transaction?.id} amount={transaction?.amount} time={transaction?.createdAt} type={transaction?.type} />)
 
   return (
-    <div className="transactionBackground">
+    <div className="transactionMainBackground">
       <div>
         <div className="serachDiv">
           <input

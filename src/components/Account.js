@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { getProfile, putDeposit, putWithdraw } from "../API/users";
-import {  useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Formik, Field, Form } from "formik";
 
 const Account = () => {
-const queryClient = useQueryClient();
+  const queryClient = useQueryClient();
 
   const { data } = useQuery({
     queryKey: ["profiles"],
@@ -14,9 +14,9 @@ const queryClient = useQueryClient();
   const mutation = useMutation({
     mutationKey: ["money"],
     mutationFn: putDeposit,
-    onSuccess:()=>{
+    onSuccess: () => {
       console.log("object")
-   queryClient.invalidateQueries({queryKey:["profiles"]})
+      queryClient.invalidateQueries({ queryKey: ["profiles"] })
     }
   });
   function submit(values) {
@@ -27,8 +27,8 @@ const queryClient = useQueryClient();
   const withdrawMutation = useMutation({
     mutationKey: ["withdraw"],
     mutationFn: putWithdraw,
-    onSuccess:()=>{
-   queryClient.invalidateQueries({queryKey:["profiles"]})
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["profiles"] })
     }
   });
   function withdraw(values) {
@@ -40,8 +40,8 @@ const queryClient = useQueryClient();
 
       <div className="centerBalance">
         <div className="welcomeDiv">
-        <h1>Welcome</h1> 
-        <h2 className="welcomeName">{data?.username}</h2>
+          <h1>Welcome</h1>
+          <h2 className="welcomeName">{data?.username}</h2>
         </div>
       </div>
 

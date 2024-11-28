@@ -35,12 +35,12 @@ const RegisterUser = () => {
         />
       </div>
 
-     {/* Register div*/}
+      {/* Register div*/}
       <div className="registerInputDiv">
         <h1>Register Your Account</h1>
         <div>
-          if you have an account, Login
-          <NavLink to="/login">here</NavLink>
+          <h4> Existing Customer, Please Login </h4>
+          <NavLink className="textRegister" to="/login">Here</NavLink>
         </div>
         <div>
           {/* Formik and rigister div*/}

@@ -23,4 +23,4 @@ const checkToken = () => {
   }
   return false;
 };
-export { checkToken, deleteToken, setToken};
+export { checkToken, deleteToken, setToken };

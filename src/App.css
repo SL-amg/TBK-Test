@@ -1,5 +1,5 @@
 /* NavBar css with Logo */
-.navBar{
+.navBar {
   justify-content: space-between;
   display: flex;
   background-color: #415a77;
@@ -11,7 +11,7 @@
   pointer-events: none;
 }
 
-.bankName{
+.bankName {
   display: flex;
   flex-direction: row;
   font-size: calc(10px + 2vmin);
@@ -35,10 +35,11 @@
   text-transform: uppercase;
   color: var(--color);
   z-index: 1;
-margin: 5px;
- }
- 
- .button::before, .button::after {
+  margin: 5px;
+}
+
+.button::before,
+.button::after {
   content: '';
   display: block;
   width: 50px;
@@ -49,38 +50,43 @@ margin: 5px;
   z-index: -1;
   background-color: var(--color);
   transition: 1s ease;
- }
- 
- .button::before {
+}
+
+.button::before {
   top: -1em;
   left: -1em;
- }
- 
- .button::after {
+}
+
+.button::after {
   left: calc(100% + 1em);
   top: calc(100% + 1em);
- }
- 
- .button:hover::before, .button:hover::after {
+}
+
+.button:hover::before,
+.button:hover::after {
   height: 410px;
   width: 410px;
- }
- 
- .button:hover {
+}
+
+.button:hover {
   color: rgb(10, 25, 30);
- }
- 
- .button:active {
+}
+
+.button:active {
   filter: brightness(.8);
- }
- 
+}
+
 /* ---- The End of NavBar Component CSS ---- */
 
 /* Footeer css with Logo */
 
 
-.footerMain{
+.footerMain {
   background-color: #415a77;
+  justify-content: center;
+  color: #e0e1dd;
+  display: flex;
+  flex-direction: row;
 }
 
 /* ---- The End of Footer Component CSS ---- */
@@ -90,8 +96,8 @@ margin: 5px;
 .registerMain {
   background-color: #e0e1dd;
   flex-direction: row;
-  display: flex; 
-   justify-content: space-between;  
+  display: flex;
+  justify-content: space-between;
   color: rgb(0, 0, 0);
 }
 
@@ -104,12 +110,12 @@ margin: 5px;
   text-align: center;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
   width: 400px;
-  height: 550px;
+  height: 600px;
   margin: 70px;
   color: #e0e1dd;
 }
 
-.barStyle{
+.barStyle {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -121,21 +127,27 @@ margin: 5px;
   width: 350px;
 }
 
-.barStyle:focus{
+.barStyle:focus {
   border: 3px solid #555;
 }
 
-.inputDiv{
+.inputDiv {
   align-items: center;
   justify-content: Center;
 }
+
 .registerImageDiv {
   display: flex;
 }
+
 .registerImage {
   width: 850px;
   font-size: 18px;
-  border-radius: 5px 0px 500px 20px;
+  border-radius: 0px 0px 500px 0px;
+}
+
+.textRegister {
+  color: #e0e1dd;
 }
 
 /* Login css */
@@ -143,8 +155,8 @@ margin: 5px;
 .loginMain {
   background-color: #e0e1dd;
   flex-direction: row;
-  display: flex; 
-   justify-content: flex-end;  
+  display: flex;
+  justify-content: flex-end;
   color: rgb(0, 0, 0);
 }
 
@@ -162,7 +174,7 @@ margin: 5px;
   color: #e0e1dd;
 }
 
-.loginbarStyle{
+.loginbarStyle {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -174,20 +186,22 @@ margin: 5px;
   width: 350px;
 }
 
-.loginbarStyle:focus{
+.loginbarStyle:focus {
   border: 3px solid #555;
 }
 
-.inputDiv{
+.inputDiv {
   align-items: center;
   justify-content: Center;
 }
+
 .loginImageDiv {
   display: flex;
   justify-content: center;
 }
+
 .loginImage {
- height: 570px;
+  height: 570px;
   position: absolute;
   right: 45%;
   border-radius: 5px 0px 500px 20px;
@@ -197,7 +211,7 @@ margin: 5px;
 
 /* Home css */
 
-.homeImage{
+.homeImage {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,27 +222,29 @@ margin: 5px;
 /* ---- The End of Home Component CSS ---- */
 
 /* Account css */
-.accountBackground{
+.accountBackground {
   background-color: #e0e1dd;
   height: 650px;
 }
+
 .centerBalance {
   display: flex;
   justify-content: center;
 }
-.welcomeDiv{
+
+.welcomeDiv {
   text-align: center;
   justify-content: center;
   align-items: center;
 }
 
-.welcomeName{
-  font-size: 35px ;
+.welcomeName {
+  font-size: 35px;
   color: #415a77;
 }
 
-.welcomeBalance{
-  font-size: 30px ;
+.welcomeBalance {
+  font-size: 30px;
   color: #415a77;
 }
 
@@ -244,6 +260,7 @@ margin: 5px;
   height: 150px;
   margin: 50px;
 }
+
 .accountAction {
   border: none;
   background: white;
@@ -257,24 +274,25 @@ margin: 5px;
   margin: 20px;
   padding: 20px;
 }
+
 /*deposit button*/
 
 .button-arounder {
   font-size: 2rem;
   background: hsl(146, 100%, 16%);
   color: hsl(190deg, 10%, 95%);
-  
+
   box-shadow: 0 0px 0px hsla(190deg, 15%, 5%, .2);
   transfrom: translateY(0);
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  
+
   --dur: .15s;
   --delay: .15s;
   --radius: 16px;
-  
+
   transition:
     border-top-left-radius var(--dur) var(--delay) ease-out,
     border-top-right-radius var(--dur) calc(var(--delay) * 2) ease-out,
@@ -302,18 +320,18 @@ margin: 5px;
   font-size: 2rem;
   background: hsl(0, 98%, 18%);
   color: hsl(190deg, 10%, 95%);
-  
+
   box-shadow: 0 0px 0px hsla(190deg, 15%, 5%, .2);
   transfrom: translateY(0);
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  
+
   --dur: .15s;
   --delay: .15s;
   --radius: 16px;
-  
+
   transition:
     border-top-left-radius var(--dur) var(--delay) ease-out,
     border-top-right-radius var(--dur) calc(var(--delay) * 2) ease-out,
@@ -334,14 +352,16 @@ margin: 5px;
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
 }
+
 /* ---- The End of Account Component CSS ---- */
 
 /* Profile css */
-.profileBackground{
+.profileBackground {
   background-color: #e0e1dd;
   height: 650px;
 }
-.centerProfile{
+
+.centerProfile {
   display: flex;
   justify-content: center;
 }
@@ -360,46 +380,73 @@ margin: 5px;
 }
 
 
-.profileWelcome{
-  font-size: 50px ;
+.profileWelcome {
+  font-size: 50px;
   color: #1b263b;
 }
 
 /* ---- The End of Profile Component CSS ---- */
 
 /* Transaction css */
-.transactionBackground{
+.transactionBackground {
+  background-color: #e0e1dd;
+  display: flex;
+  /* to make them side by side */
+  flex-wrap: wrap;
+  /* to make them side by side */
+}
+
+.transactionMainBackground {
   background-color: #e0e1dd;
 }
-.serachDiv{
+
+.serachDiv {
   display: flex;
   justify-content: center;
 }
 
-.line{
-background-color: #fff;
-height: 31px;
-width: 400px;
-padding: 3px 7px;
-line-height: normal;
-border: 1px solid #a6a6a6;
-border-top-color: #949494;
-border-radius: 3px;
-box-shadow: 0 1px 0 rgb(255 255 255 / 50%), 0 1px 0 rgb(0 0 0 / 7%) inset;
-outline: 0;
-color: #111;
-font-size: 13px;
-margin: 10px;
+.transactionArrange {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
 }
 
-.line:focus{
-    border-color: #1b263b;
-    box-shadow: 0 0 3px 2px #1b263b;
+.transactionArrange>div {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 200px;
+  /* Adjust width of each user card */
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.line {
+  background-color: #fff;
+  height: 31px;
+  width: 400px;
+  padding: 3px 7px;
+  line-height: normal;
+  border: 1px solid #a6a6a6;
+  border-top-color: #949494;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgb(255 255 255 / 50%), 0 1px 0 rgb(0 0 0 / 7%) inset;
+  outline: 0;
+  color: #111;
+  font-size: 13px;
+  margin: 10px;
+}
+
+.line:focus {
+  border-color: #1b263b;
+  box-shadow: 0 0 3px 2px #1b263b;
 }
 
 /*selector button*/
 
-.selectBox{
+.selectBox {
   background-color: #415a77;
   width: 300px;
   color: #e0e1dd;
@@ -407,10 +454,11 @@ margin: 10px;
   padding: 3px;
 }
 
-.resultView{
-  justify-content: center;
-  text-align: center;
+.resultView {
+  /* justify-content: center;
+  text-align: center; */
 }
+
 /* ---- The End of transactions Component CSS ---- */
 
 /* Users css */
@@ -419,7 +467,7 @@ margin: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
+  width: 25%;
 }
 
 .userAction {
@@ -435,26 +483,27 @@ margin: 10px;
   padding: 20px;
 }
 
-.welcomeDiv{
+.welcomeDiv {
   text-align: center;
   justify-content: center;
   align-items: center;
 }
 
-.userImageBalance{
-  font-size: 25px ;
+.userImageBalance {
+  font-size: 25px;
   color: #415a77;
 }
 
-.valueUserBalance{
-  font-size: 30px ;
+.valueUserBalance {
+  font-size: 30px;
   color: #5598e6;
 }
 
-.centerImageUser{
+.centerImageUser {
   justify-content: center;
   align-items: center;
 }
+
 /* ---- The End of users Component CSS ---- */
 
 .App {
@@ -487,11 +536,11 @@ margin: 10px;
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
